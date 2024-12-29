@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1- Write a program that prints numbers from 1 to 10 using a for loop.
+        for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
+
+// 2-Write a program that prints the even numbers from 1 to 10 using a for loop.
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+// 3- Write a program that prints the odd numbers from 1 to 10 using a while loop.
+
+let i = 1; // Start with 1
+
+while (i <= 10) {
+    if (i % 2 !== 0) { // Check if the number is odd
+        console.log(i);
+    }
+    i++; // Increment to the next number
+}
+// 4- Write a program that prints the multiplication table of a number entered by the user using a for loop.
+const number = parseInt(prompt("Enter a number to display its multiplication table:"), 10);
+
+// Check if the entered value is a valid number
+if (isNaN(number)) {
+    console.log("Please enter a valid number.");
+} else {
+    // Loop to generate the multiplication table
+    for (let i = 1; i <= 10; i++) {
+        console.log(`${number} x ${i} = ${number * i}`);
+    }
+}
+
+// 5- Write a program that calculates the sum of numbers from 1 to 100 using a while loop.
+
+let sum = 0; // Initialize sum to 0
+let i = 1;   // Start from 1
+
+while (i <= 100) {
+    sum += i; // Add the current number to the sum
+    i++;      // Increment the number
+}
+
+console.log("The sum of numbers from 1 to 100 is:", sum);
+
+// 6- Write a program that calculates the factorial of a number entered by the user using a for loop.
+const number = parseInt(prompt("Enter a number to calculate its factorial:"), 10);
+
+// Check if the entered value is a valid number
+if (isNaN(number) || number < 0) {
+    console.log("Please enter a valid non-negative number.");
+} else {
+    let factorial = 1; // Initialize factorial to 1
+
+    // Loop to calculate factorial
+    for (let i = 1; i <= number; i++) {
+        factorial *= i; // Multiply factorial by current number
+    }
+
+    console.log(`The factorial of ${number} is: ${factorial}`);
+}
+
+// 7- Write a program that prints the Fibonacci series up to a certain number entered by the user using a while loop.
+const limit = parseInt(prompt("Enter a number to print Fibonacci series up to that number:"), 10);
+
+// Check if the entered value is a valid number
+if (isNaN(limit) || limit <= 0) {
+    console.log("Please enter a valid positive number.");
+} else {
+    let a = 0, b = 1; // Initialize the first two numbers of the Fibonacci series
+
+    // Print the Fibonacci series up to the limit
+    console.log("Fibonacci series:");
+    while (a <= limit) {
+        console.log(a);
+        const next = a + b; // Calculate the next Fibonacci number
+        a = b; // Update a to b
+        b = next; // Update b to the next number
+    }
+}
+
+// 8- Write a program that prints the reverse of the following numbers:
+//5 , 10 , 15 , 20
+// using a while loop. 
+let numbers = [5, 10, 15, 20]; // The array of numbers
+let index = numbers.length - 1; // Start from the last index
+
+// Use a while loop to print the numbers in reverse order
+while (index >= 0) {
+    console.log(numbers[index]);
+    index--; // Move to the previous index
+}
+
+    </script>
+</body>
+</html>
